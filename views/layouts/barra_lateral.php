@@ -1,5 +1,12 @@
 <aside id="barra_lateral">
 
+	<h3>Carrito de compra</h3>
+
+	<ul>
+		<li>Productos (<?= isset($_SESSION['cantidad_pedido']) ? $_SESSION['cantidad_pedido'] : 0; ?>)</li>
+		<li>Total: $<?= isset($_SESSION['total_pedido']) ? $_SESSION['total_pedido']: 0; ?></li>
+	</ul>
+
 	<?php if(!isset($_SESSION['usuario'])): ?>
 
 		<h3>Inicia sesión</h3>

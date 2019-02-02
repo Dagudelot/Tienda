@@ -55,6 +55,14 @@ class carritoController{
 
 			}
 
+			$_SESSION['total_pedido'] = 0;
+			$_SESSION['cantidad_pedido'] = 0;
+
+			for ($i=0; $i < count($_SESSION['carrito']); $i++) { 
+				$_SESSION['total_pedido'] += (($_SESSION['carrito'][$i]['producto']['precio'])*($_SESSION['carrito'][$i]['cantidad']));
+				$_SESSION['cantidad_pedido']++;
+			}
+
 			header('Location: '.base_url.'carrito/add');
 
 		}else{
@@ -77,6 +85,9 @@ class carritoController{
 
 	public function deleteCar(){
 		unset($_SESSION['carrito']);
+		unset($_SESSION['total_pedido']);
+		unset($_SESSION['cantidad_pedido']);
+		header('Location: '.base_url);
 	}
 
 

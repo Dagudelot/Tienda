@@ -264,6 +264,8 @@ button{
     margin:10px auto;
 }
 
+
+
 /* FOOTER */
 #footer{
 	grid-area: footer;
@@ -306,6 +308,12 @@ button{
 }
 
 /*CARRITO*/
+
+h4{
+	text-align: right;
+	margin-top: 30px;
+}
+
 .delete-carrito{
    width: 295px;
    float: left; 
@@ -325,18 +333,18 @@ button{
 
 .total-carrito{
    width: 295px;
+   margin-top: 30px;
    float: right; 
 }
 
-.total-carrito h3{
-    display: block;
+.total-carrito h4{
+    display: inline;
     float:left;
     margin-top: 5px;
 }
 
 .button-pedido{
     display: block;
-    float: right;
     width: 100px;
 }
 
