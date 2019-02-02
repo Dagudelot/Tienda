@@ -53,17 +53,19 @@ class carritoController{
 					);	
 				}
 
-			}	
+			}
 
-			//$_SESSION['carrito'] = $this->productos;
-
-
-
-			 var_dump($_SESSION['carrito']);
+			header('Location: '.base_url.'carrito/add');
 
 		}else{
 
-			header('Location: '.base_url);
+			if(count($_SESSION['carrito']) > 0){
+
+				require_once('views/carrito/ver.php');
+
+			}else{
+				header('Location: '.base_url);
+			}
 
 		}		
 
